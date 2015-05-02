@@ -14,6 +14,11 @@
 		488372441AF49F1C002FEB3A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 488372431AF49F1C002FEB3A /* Images.xcassets */; };
 		488372471AF49F1C002FEB3A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 488372451AF49F1C002FEB3A /* LaunchScreen.xib */; };
 		488372531AF49F1C002FEB3A /* SpeechRecognitionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 488372521AF49F1C002FEB3A /* SpeechRecognitionTests.m */; };
+		4883725D1AF49FF8002FEB3A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4883725C1AF49FF8002FEB3A /* AVFoundation.framework */; };
+		4883725F1AF4A001002FEB3A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4883725E1AF4A001002FEB3A /* AudioToolbox.framework */; };
+		4883726A1AF4A078002FEB3A /* AcousticModelEnglish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 488372671AF4A078002FEB3A /* AcousticModelEnglish.bundle */; };
+		4883726B1AF4A078002FEB3A /* OpenEars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 488372681AF4A078002FEB3A /* OpenEars.framework */; };
+		4883726C1AF4A078002FEB3A /* Slt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 488372691AF4A078002FEB3A /* Slt.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +45,11 @@
 		4883724C1AF49F1C002FEB3A /* SpeechRecognitionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpeechRecognitionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		488372511AF49F1C002FEB3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		488372521AF49F1C002FEB3A /* SpeechRecognitionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpeechRecognitionTests.m; sourceTree = "<group>"; };
+		4883725C1AF49FF8002FEB3A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		4883725E1AF4A001002FEB3A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		488372671AF4A078002FEB3A /* AcousticModelEnglish.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AcousticModelEnglish.bundle; sourceTree = "<group>"; };
+		488372681AF4A078002FEB3A /* OpenEars.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenEars.framework; sourceTree = "<group>"; };
+		488372691AF4A078002FEB3A /* Slt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Slt.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +57,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4883726C1AF4A078002FEB3A /* Slt.framework in Frameworks */,
+				4883725F1AF4A001002FEB3A /* AudioToolbox.framework in Frameworks */,
+				4883725D1AF49FF8002FEB3A /* AVFoundation.framework in Frameworks */,
+				4883726B1AF4A078002FEB3A /* OpenEars.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,9 +77,12 @@
 		4883722A1AF49F1C002FEB3A = {
 			isa = PBXGroup;
 			children = (
+				4883725E1AF4A001002FEB3A /* AudioToolbox.framework */,
+				4883725C1AF49FF8002FEB3A /* AVFoundation.framework */,
 				488372351AF49F1C002FEB3A /* SpeechRecognition */,
 				4883724F1AF49F1C002FEB3A /* SpeechRecognitionTests */,
 				488372341AF49F1C002FEB3A /* Products */,
+				488372661AF4A078002FEB3A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,6 +134,16 @@
 				488372511AF49F1C002FEB3A /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		488372661AF4A078002FEB3A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				488372671AF4A078002FEB3A /* AcousticModelEnglish.bundle */,
+				488372681AF4A078002FEB3A /* OpenEars.framework */,
+				488372691AF4A078002FEB3A /* Slt.framework */,
+			);
+			path = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				488372421AF49F1C002FEB3A /* Main.storyboard in Resources */,
+				4883726A1AF4A078002FEB3A /* AcousticModelEnglish.bundle in Resources */,
 				488372471AF49F1C002FEB3A /* LaunchScreen.xib in Resources */,
 				488372441AF49F1C002FEB3A /* Images.xcassets in Resources */,
 			);
@@ -348,8 +376,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = SpeechRecognition/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -358,8 +392,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = SpeechRecognition/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
