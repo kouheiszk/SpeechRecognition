@@ -6,13 +6,13 @@
 //  Copyright (c) 2015年 kouheiszk. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "OSRAppDelegate.h"
 
-@interface AppDelegate ()
+@interface OSRAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation OSRAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {

@@ -6,13 +6,13 @@
 //  Copyright (c) 2015年 kouheiszk. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "OSRViewController.h"
 
-@interface ViewController ()
+@interface OSRViewController ()
 
 @end
 
-@implementation ViewController
+@implementation OSRViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
